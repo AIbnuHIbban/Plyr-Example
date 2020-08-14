@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Video - Plyr Example</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.css'/>
+    <link rel="stylesheet" href="../asset/style.css">
+    <style>
+        .container {
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+        a{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video controls crossorigin playsinline poster="https://i.ytimg.com/vi/OEkOjjjVg10/maxresdefault.jpg">
+            <source src="../asset/video.mp4" type="video/mp4">
+
+            <!-- If Want Use Size -->
+
+            <!-- <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+            <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080"> -->
+    
+            <!-- Caption files -->
+
+            <!-- <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+                    default>
+            <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt"> -->
+
+            <!-- Fallback for browsers that don't support the <video> element -->
+            <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+        </video>
+        <p class="text-center">
+            <a href="../index.html">Back to Home</a>
+        </p>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.min.js'></script>
+    <script>
+        const player = new Plyr('video', {});
+        window.player = player;
+    </script>
+</body>
+</html>

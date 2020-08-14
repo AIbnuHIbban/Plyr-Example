@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube - Plyr Example</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.css'/>
+    <link rel="stylesheet" href="../asset/style.css">
+    <style>
+        .container {
+            margin: 30px auto;
+            max-width: 1000px;
+        }
+        .plyr--video{
+            border-radius: 30px;
+        }
+        a{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="OEkOjjjVg10"></div>
+        <p class="text-center">
+            <a href="../index.html">Back to Home</a>
+        </p>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.min.js'></script>
+    <script>
+        const player = new Plyr('#player', {});
+        window.player = player;
+    </script>
+</body>
+</html>

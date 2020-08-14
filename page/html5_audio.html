@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Audio - Plyr Example</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.css'/>
+    <link rel="stylesheet" href="../asset/style.css">
+    <style>
+        .container {
+            margin: 40vh auto;
+            max-width: 1000px;
+        }
+        a{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <audio crossorigin playsinline>
+            <source src="../asset/audio.wav" type="audio/wav">
+        </audio>
+        <p class="text-center">
+            <a href="../index.html">Back to Home</a>
+        </p>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.min.js'></script>
+    <script>
+        const player = new Plyr('audio', {});
+        window.player = player;
+    </script>
+</body>
+</html>
